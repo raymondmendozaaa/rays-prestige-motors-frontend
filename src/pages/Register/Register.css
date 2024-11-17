@@ -1,0 +1,111 @@
+
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f4f8;
+    margin: 0;
+}
+
+.register-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.register-title {
+    font-size: 24px;
+    color: #3a506b;
+    text-align: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.register-form-row label {
+    font-size: 16px;
+    color: #4c566a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register-form-row input[type="text"],
+.register-form-row input[type="password"] {
+    width: 95%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.register-form-row button {
+    background-color: rgba(60,139,138,255);
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.register-form-row button:hover {
+    background-color: rgba(40,119,118,235);
+}
+
+.have-an-account {
+    margin-top: 20px;
+    font-size: 14px;
+    padding-left: 2rem;
+}
+
+.login-here {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(60,139,138,255);
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.login-here:hover {
+    text-decoration: underline;
+}
+
+.register-form-row.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.checkbox-register-form-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4c566a;
+    margin: 0; 
+    padding-left: 0.2rem;
+}
+
+.error-message {
+    color: #e63946;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.success-message {
+    color: #40916c;
+    font-size: 14px;
+    margin-top: 10px;
+}

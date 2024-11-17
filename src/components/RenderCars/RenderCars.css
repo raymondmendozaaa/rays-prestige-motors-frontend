@@ -1,0 +1,19 @@
+.qa-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9fafc;
+}
+
+.qa-item h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #2e3440;
+}
+
+.qa-item p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #4c566a;
+}
