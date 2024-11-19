@@ -8,10 +8,10 @@ function RenderCars({description}){
             <h4>{description.make_model}</h4>
             {
                 description.price.mpg.color ? 
-                <div>
-                    <p>{description.price}</p>
-                    <p>{description.mpg}</p>
-                    <p>{description.color}</p>
+                <div className="car-description-container">
+                    <p className="car-description-container-field">{description.price}</p>
+                    <p className="car-description-container-field">{description.mpg}</p>
+                    <p className="car-description-container-field">{description.color}</p>
                 </div> 
                 :  <p>No description available</p>
             }

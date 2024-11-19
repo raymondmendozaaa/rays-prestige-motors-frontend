@@ -1,20 +1,19 @@
 .home-layout {
     display: flex;
-    height: calc(100vh - 60px); 
-    margin-top: 20px;
+    height: calc(100vh - 60px);
 }
 
 .category-list-container {
     width: 20%;
     border-right: 2px solid #ccc;
-    background-color: #f0f4f8;
+    background-color: hsl(0, 0%, 93%);
     padding: 10px;
 }
 
 .car-description-container {
     width: 80%;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .car-description-list {

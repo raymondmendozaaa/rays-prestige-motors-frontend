@@ -21,6 +21,6 @@ button {
     transition: background-color 0.5s ease;
 }
 
-button:hover {
+.delete-button button:hover {
     background-color: rgba(40,119,118,235);
 }
