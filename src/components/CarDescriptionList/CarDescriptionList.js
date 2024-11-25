@@ -1,57 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-// import RenderCars from "../RenderCars/RenderCars.js";
+import RenderCars from "../RenderCars/RenderCars.js";
 import './CarDescriptionList.css';
 
 function CarDescriptionList({selectedCarCategory}) {
-    const [cars, setCars] = React.useState([]);
-
-    useEffect(() => {
-        const fetchCars = async () => {
-            if (!selectedCarCategory) return;
-
-            try {
-                const response = await fetch(`http://localhost:5000/api/car_description/${selectedCarCategory}`);
-                const data = await response.json();
-                setCars(data);
-            } catch (error) {
-                console.error('Error fetching cars:', error);
-            }
-        };
-
-        fetchCars();
-    }, [selectedCarCategory]);
-
-    if(!selectedCarCategory)
-        return (
-            <div className="car-description-container">
-                <h3>Please select a car category to view cars</h3>
-            </div>
-        )
-
-    return (
-        <div>
-            {selectedCarCategory && (
-                <div className="car-description-container">
-                    <h3>Cars in Selected Category</h3>
-                    <ul className="car-description-list">
-                        {cars.map(car => (
-                            <li key={car.car_description_id}>
-                                <strong>{car.make_model}</strong><br />
-                                Price: ${car.price.toFixed(2)}<br />
-                                MPG: {car.mpg}<br />
-                                Color: {car.color}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-        </div>
-    );
-};
-
-    /*
     const [car_description, descriptionSetter] = useState([]);
     
     const handleDelete = (selectedCarCategory) => {
@@ -112,5 +65,53 @@ function CarDescriptionList({selectedCarCategory}) {
         </div>
     )
 }
-*/
+
 export default CarDescriptionList;
+
+/*
+    const [cars, setCars] = React.useState([]);
+
+    useEffect(() => {
+        const fetchCars = async () => {
+            if (!selectedCarCategory) return;
+
+            try {
+                const response = await fetch(`http://localhost:5000/api/car_description/${selectedCarCategory}`);
+                const data = await response.json();
+                setCars(data);
+            } catch (error) {
+                console.error('Error fetching cars:', error);
+            }
+        };
+
+        fetchCars();
+    }, [selectedCarCategory]);
+
+    if(!selectedCarCategory)
+        return (
+            <div className="car-description-container">
+                <h3>Please select a car category to view cars</h3>
+            </div>
+        )
+
+    return (
+        <div>
+            {selectedCarCategory && (
+                <div className="car-description-container">
+                    <h3>Cars in Selected Category</h3>
+                    <ul className="car-description-list">
+                        {cars.map(car => (
+                            <li key={car.car_description_id}>
+                                <strong>{car.make_model}</strong><br />
+                                Price: ${car.price.toFixed(2)}<br />
+                                MPG: {car.mpg}<br />
+                                Color: {car.color}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </div>
+    );
+};
+*/
